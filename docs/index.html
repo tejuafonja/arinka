@@ -1,0 +1,114 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arinka</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:500,800" rel="stylesheet">
+
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <header class="header">
+            <div class="navbar">
+                <nav class="nav--items">
+                        <p class="logo">
+                            <img src="../img/aeroplane.svg" alt="" width="34" height="40">
+                        </p>
+                    
+                        <div class="nav--items-list" id="nav">
+                                <a href="#" id="menu"></a>
+                                <a class="nav--item" id="locations">locations</a>
+                                <a class="nav--item" id="moods">moods</a>
+                                <a class="nav--item" id="blog">blog</a>
+                                <a class="nav--item" id="login">login / signup</a>
+                        </div>
+                        
+                </nav>
+            </div>
+
+        <div class="main-header">
+            <div>
+                 <h1 class="header--title">Discover the best places to travel to in Nigeria</h1>
+                <p>What type of adventure are you looking for?</p>
+                <p >e.g educational, outdoors, relaxed</p>
+            </div>
+           
+        </div>
+    </header>
+    <main>
+        <section class="about">
+            <div class="about--container">
+                    <div class="about-arinka">
+                            <h4 class="about-header">About Arinka</h4>
+                            <p >Arinka is a fictional company, but it is actually a real idea someone had in the past.</p>
+                            <p> In 1985 Aldus Corporation launched it's first publishing program Aldus PageMaker
+                                
+                                for Apple Macintosh computers, released in 1987 for PCs running Windows 1.0. Both
+                                contained the variant lorem ipsum most common today
+                            </p>
+                    </div>
+                    <div class="about-gallery">
+                        <a href="#" id="mountain">
+                            <div >
+                                <h1>Bauchi Park</h1>
+                                <p>Relaxed holiday for two</p>
+                            </div>
+                            
+                        </a>
+                        <a href="#"  id="dinner">
+                            <div>
+                                <h1>Jos, Plateau</h1>
+                                <p>Experience Nigeria in the 60s</p>
+                            </div>
+                            
+                        </a>
+                        <a href="#" id="car">
+                            <div >
+                                <h1>Abuja Car Racing</h1>
+                                <p>Get your Adrenalin Pumping</p>
+                            </div>
+                            
+                        </a>
+                    </div>
+                    <p class="more">see more</p>
+            </div>
+            
+        </section>
+        <section class="blog">
+            <div class="shape"></div>
+            <div class="blog-post">
+                <p class="uppercase">on the blog</p>
+                <h1>Hanging out in Borno</h1>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>Terms and Conditions</p>
+        <p>Copyright Frontstack, 2017</p>
+    </footer>
+
+    <script>
+        function animateMenu() {
+            let menu = document.getElementById("menu")
+
+            let nav = document.querySelectorAll(".nav--item")
+            menu.addEventListener('click', function(evt) {
+
+            document.querySelectorAll(".nav--item").forEach(function(el) {
+                el.classList.toggle('open') 
+            })
+
+            evt.stopPropagation()
+            })
+        }
+        
+        animateMenu()
+    </script>
+</body>
+</html>
