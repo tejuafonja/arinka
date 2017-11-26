@@ -1,0 +1,581 @@
+    /******* Body && Html  *******/
+    html,
+    body {
+        width: 100%;
+        height: 100vh;
+        font-family: 'Catamaran', sans-serif;
+        font-size: 14px;
+        color: #fff ;
+        line-height: 1;
+    }
+
+    html {
+        background: #fff;
+    }
+
+    body {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+
+    /*******  Flexbox *******/
+    body,
+    .logo,
+    .about-gallery,
+    footer {    
+        display: flex;
+    }
+
+    main {
+        flex: 2;
+    }
+
+    /******* Aesthetics *******/
+    a:hover {
+        text-decoration: underline
+    }
+
+    /********  Header Section *******/
+    header {
+        background: linear-gradient(to bottom, #E7454A, #D29741);
+        position: relative;
+        width: 100%;
+    }
+
+    .nav--items {
+        display: block;
+        margin: 10px;
+        font-size: 0.9rem;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    /******* Hide class nav item *******/
+    .nav--item {
+        transform: translate(900px, 0);
+        transition: transform 0.4s ease;
+    }
+
+
+    /******* Unhide class  *******/
+    .nav--item.open {
+        transform: translate(0,0)
+    }
+
+
+    .nav--items a {
+        display: block;
+        padding: 10px;
+        background:rgba(255,255,255,0.1);
+        text-align: right;
+    }
+
+    /******* Pad second and last child of nav item *******/
+    a.nav--item:nth-child(2) {
+        padding-top: 20px;
+    }
+
+    a.nav--item:last-of-type {
+        padding-bottom: 20px;
+    }
+
+    .nav--items-list {
+        width: 150px;
+        height: 250px;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        padding-right: 10px;
+        letter-spacing: 0;
+        line-height: 1; 
+        cursor: pointer;
+    }
+
+
+
+    /******* Hambugger Menu *******/
+    #menu {
+        color: #fff;
+        font-size: 24px;
+        display: block;
+        background: transparent;
+        transform: translate(0,0)
+    }
+    #menu::before {content: '\2630'}
+
+
+
+    .logo {
+        margin-right: auto;
+        height: 40px;
+    } 
+
+
+    .logo::after {
+        content: 'arinka';
+        align-self: center;
+        margin-left: 14px;
+        margin-bottom: -6px;
+        font-weight: 800;
+    }
+
+    .main-header {
+        width: 80%;
+        margin: 40px auto;
+        text-align: center;
+    }
+    .main-header h1 {
+        font-weight: 800;
+        letter-spacing: 0.3;
+        margin-top: 40px;
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+    }
+    .main-header p {
+        font-size: 1rem;
+    }
+
+
+    .main-header p:last-of-type {
+        width: 80%;
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        font-size: 14px;
+        color: #ddd;
+        padding: 10px 20px;
+        bottom: -15px;
+        border: 2px solid #ECA12B;
+        border-radius: 50px;
+        margin: 0 auto;
+
+    }
+    
+
+    /******* About Section  *******/
+    .about {
+        color: #fff;
+    }
+    .about--container {
+        background: #fff;
+        color: #000;
+        margin: 0 auto;
+        line-height: 1.5;
+
+    }
+
+
+    .about-header {
+        margin-top: 80px;
+        margin-bottom: 50px;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ccc;
+        font-weight: 800;
+        letter-spacing: 2.5;
+        line-height: 0.9
+
+    }
+
+    .about-arinka  p {
+        font-size: 1.3rem;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    .about-arinka p:last-of-type{
+        margin-bottom: 80px;
+    }
+
+    .about-gallery {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-gallery a {
+        height: 50vh;
+        width: 80%;
+        margin-bottom: 40px;
+        position: relative;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 800;
+    }
+
+    .more {
+        width: 150px;
+        padding: 5px 10px;
+        color: #DF6948;
+        border: 1px solid #DF6948;
+        border-radius: 20px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+
+    }
+
+
+    .about-gallery div {
+        position: absolute;
+        bottom: 0px;
+        margin: 40px 34px;
+    }
+
+
+    .about-gallery a h1 {
+        font-size: 2.5rem;
+        color: #fff;
+
+    }
+    .about-gallery a p {
+        color: rgba(209, 149, 64, 0.777);
+        font-size: 1.2em;
+    }
+
+    /******* Gallery style settings  *******/
+    #mountain:before,
+    #car:before,
+    #dinner:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(to bottom right,#000,#000);
+        opacity: .5; 
+        border-radius: 5px;
+    }
+
+
+    #mountain {
+        background: url('http://res.cloudinary.com/s3nsei/image/upload/c_fill,w_350,h_600/mountain.jpg');
+        background-position: 0px -100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #car {
+        background: url('http://res.cloudinary.com/s3nsei/image/upload/c_fill,w_350,h_550/car.jpg');
+        background-position: 0px -120px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #dinner {
+        background-image: url('http://res.cloudinary.com/s3nsei/image/upload/c_fill,w_350,h_600/dinners.jpg');
+        background-position: 0 -140px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .blog {
+        background: linear-gradient(to bottom, #DE6C47, #D39242);
+        position: relative;
+    }
+
+
+    .shape {
+        background: coral; 
+        width: 100%;
+        height: 30vh;
+        background: url('http://res.cloudinary.com/s3nsei/image/upload/w_450,c_mfit/sunset.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        clip-path: polygon(50% 0vh, 100% 0vh, 100% 30vh, 35% 30vh)
+    }
+
+
+    /******* Blog Section  *******/
+    .blog-post {
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        width: 40%;
+        font-size: 0.7rem;
+        color: #fff;
+    }
+
+    .blog p{
+        color: #F6CD46;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+
+    .blog h1 {
+        font-size: 2.5rem;
+    }
+
+    /******* Footer Section  *******/
+    footer {
+        background: #fff;
+        color: #ccc;
+        justify-content: space-between;
+        padding: 20px;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+
+
+/*****
+*************** Media Queries
+******/
+
+
+/*  Media query for screen size of 1025px and above --- large screens */
+
+@media (min-width: 1025px) {
+
+    /******* Flexbox *******/
+    .nav--items,
+    .nav--items-list,
+    .about-gallery {
+        display: flex;
+    }
+
+    /******* Header Section  *******/
+    .nav--items {
+        justify-content: space-between;
+        margin: 26px 40px;
+    }
+
+    .nav--items-list {
+        width: inherit;
+        height: inherit;
+        position: relative;
+        flex: 2;
+        align-self: center;
+        justify-content: flex-end;
+        padding-right: 0;
+    }
+
+    /******* Remove underline  *******/
+    a:hover {
+        text-decoration: none;
+    }
+
+
+    /******* align middle nav item properly  *******/
+    .nav--items-list:first-of-type {
+        margin-left: 150px;
+    }
+
+    .nav--items a {
+        padding:  13px  20px;
+        font-weight: 800;
+    }
+
+    /******* Remove background from nav item class except last *******/
+    .nav--items a:not(:last-of-type) {
+        background: none;
+    }
+
+    /******* Unhiding the nav item class  *******/
+    .nav--item {
+        transform: translate(0,0);
+    }
+    
+    /******* Resetting the second chid  *******/
+    a.nav--item:nth-child(2) {
+        padding-top: 13px;
+    }
+
+    .logo {
+         margin: 0;
+         flex: 1;
+    }
+    
+    /******* Hide hambugger menu  *******/
+    #menu {
+        display: none;
+    }
+
+
+    /******* style nav item's last child  *******/
+    a.nav--item:last-of-type  {
+        margin-left: auto;
+        border-radius: 20px;
+        padding: 13px 30px;
+        background:rgba(255,255,255,0.2);
+    }
+
+    /******* Absolute width intended to maintain a constant width size  *******/
+    .main-header {
+        width: 500px;
+        text-align: center;
+    }
+
+    .main-header h1 {
+        font-size: 3rem;  
+        margin-top: 124px;
+        margin-bottom: 68px;
+    }
+
+    .main-header p {
+        font-size: 1.4rem;
+    }
+
+    .main-header p:last-of-type {
+        width: 500px;
+        bottom: -30px;
+        font-size: 14px;
+        padding: 20px 30px;
+    }
+    
+
+    /******* About Section *******/
+    .about-header{
+        margin-top: 150px;
+        margin-bottom: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .about-arinka  p {
+        width: 904px;
+        font-size: 1.7rem;
+        margin: 0 auto;
+    }
+
+    .about-gallery {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    
+    .about-gallery a {
+        width: 350px;
+        height: 400px;
+    }
+
+    .about-gallery a:not(:last-of-type) {
+        margin-right: 50px;
+    }
+
+    /******* Resetting the image position to fit properly on large screens *******/
+    #mountain {
+        background-position: 0px -100px;
+    }
+    
+    #car {
+        background-position: 0px -120px;
+    }
+    
+    #dinner {
+        background-position: 0 -140px;
+    }
+
+    .more {
+        margin: 80px auto;    
+        padding: 10px 30px;
+    }
+
+    /******* Shaping out the polygon based on the new height  *******/
+    .shape {
+        height: 500px;
+        background-position: 40px -150px;
+        clip-path: polygon(50% 0vh, 100% 0vh, 100% 500px, 35% 500px)
+    }
+
+
+    /******* Blog Section  *******/
+    .blog-post {
+        width: 400px;
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        font-size: 1.2rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    .blog h1 {
+        font-size: 5rem;
+    }
+    
+    .blog p {
+        margin-bottom: 40px;
+    }
+
+
+    /******* Footer Section *******/
+    footer {
+        padding: 40px;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/******* media query for screens between 498 and 1024px -- medium screen sizes  *******/
+@media (min-width:498px) and (max-width:1024px) {
+
+    /******* Header Section *******/
+    .main-header {
+        width: 70%;
+    }
+
+    .main-header h1 {
+        font-size: 3rem;  
+     
+    }
+
+    .main-header p {
+        font-size: 1.2rem;
+    }
+
+    .main-header p:last-of-type  {
+        width: 70%;
+    }
+
+    /******* Grabbing a image with differnt width and height  *******/
+    #mountain {
+        background: url('http://res.cloudinary.com/s3nsei/image/upload/c_fill,w_550,h_300/mountain.jpg') no-repeat;
+        background-size: cover;
+    }
+    
+    #dinner {
+        background: url('http://res.cloudinary.com/s3nsei/image/upload/c_fill,w_550,h_300/dinners.jpg') no-repeat;
+        background-size: cover;
+        
+    }
+    #car {
+        background: url('http://res.cloudinary.com/s3nsei/image/upload/c_fill,w_550,h_300/car.jpg') no-repeat;
+        background-size: cover;
+        
+    }
+
+    .shape {
+        height: 50vh;
+        background: url('http://res.cloudinary.com/s3nsei/image/upload/w_550,h_300,c_fill/sunset.jpg') no-repeat;
+        background-size: cover;
+        clip-path: polygon(50% 0vh, 100% 0vh, 100% 50vh, 35% 50vh)
+    }
+
+    /******* Blog Section *******/
+    .blog-post {
+        width: 30%;
+        left: 50px;
+        top: 50px;
+    }
+
+    .blog h1 {
+        font-size: 4rem;
+    }
+    
+}
